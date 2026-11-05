@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Gabriela Dantas · Ortodontista</title>
+<meta name="description" content="Dra. Gabriela Dantas, especialista em Ortodontia no Brooklin, São Paulo. Alinhadores invisíveis, aparelho metálico e ortopedia infantil.">
+<link rel="icon" href="assets/logo-gd.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F2EE; --bg-2:#EFE6E1; --surface:#FFFFFF;
+  --ink:#22141A; --ink-2:#4A3740; --muted:#7B6A70;
+  --plum:#5A2D3F; --plum-deep:#1D0F15; --plum-mid:#2C1820;
+  --rose:#B9858F; --blush:#EBD9D6; --gold:#B89B6E; --gold-soft:#D9C6A5;
+  --line:rgba(34,20,26,.12); --line-light:rgba(255,255,255,.14);
+  --radius:22px;
+  --serif:"Instrument Serif", "Times New Roman", serif;
+  --sans:"Manrope", system-ui, -apple-system, sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+@media(min-width:720px){.wrap{width:min(1240px,100% - 64px)}}
+
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--plum);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.dark .eyebrow{color:var(--gold-soft)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.02}
+h2{font-size:clamp(40px,6vw,76px)}
+h2 em,h1 em{font-style:italic;color:var(--plum)}
+.dark h2 em{color:var(--gold-soft)}
+.lead{font-size:clamp(16px,1.4vw,18px);color:var(--ink-2);max-width:56ch}
+
+.btn{display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 26px 0 28px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .4s var(--ease),background .3s,box-shadow .4s}
+.btn-primary{background:var(--plum);color:#fff;box-shadow:0 14px 34px -14px rgba(90,45,63,.7)}
+.btn-primary:hover{transform:translateY(-2px);background:#4a2233}
+.btn-primary .ico{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;margin-right:-12px}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--surface)}
+.dark .btn-ghost{border-color:var(--line-light);color:#fff}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,backdrop-filter .4s}
+.nav.scrolled{background:rgba(247,242,238,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:40px;height:40px;border-radius:50%;background:#fff;padding:4px;box-shadow:0 0 0 1px var(--line)}
+.brand b{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.005em;line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav ul{display:none;list-style:none;gap:34px;font-size:14px;font-weight:500;color:var(--ink-2)}
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--plum);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav ul a:hover::after{transform:scaleX(1)}
+.nav .btn{height:44px;padding:0 20px;font-size:14px}
+@media(min-width:980px){.nav ul{display:flex}}
+@media(max-width:560px){.nav .btn span.lbl{display:none}.nav .btn{padding:0 14px}}
+
+/* HERO */
+.hero{position:relative;padding:130px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:900px;height:900px;right:-260px;top:-240px;background:radial-gradient(closest-side,rgba(185,133,143,.32),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;gap:56px;align-items:center;position:relative}
+@media(min-width:980px){.hero-grid{grid-template-columns:1.15fr .85fr;gap:40px}.hero{padding:150px 0 90px}}
+.hero h1{font-size:clamp(52px,8.2vw,112px);margin:22px 0 28px}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:inline-block;transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:none}}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line);max-width:620px}
+.creds div{padding:18px 16px 0 0}
+.creds div+div{padding-left:18px;border-left:1px solid var(--line)}
+.creds b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.1}
+.creds span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
+
+.portrait{position:relative;justify-self:center;width:min(440px,100%)}
+.portrait .frame{position:relative;aspect-ratio:4/5.4;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--blush);box-shadow:0 50px 90px -40px rgba(60,25,40,.55)}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.06);animation:settle 1.8s var(--ease) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.portrait .ring{position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:999px 999px 38px 38px;opacity:.55;pointer-events:none}
+.float-card{position:absolute;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.8);border-radius:18px;padding:14px 18px;box-shadow:0 24px 50px -24px rgba(40,15,25,.45);font-size:13px;line-height:1.35}
+.float-card b{display:block;font-size:14px}
+.float-card span{color:var(--muted)}
+.fc-1{left:-28px;bottom:70px;display:flex;gap:12px;align-items:center;animation:bob 6s ease-in-out infinite}
+.fc-1 i{width:38px;height:38px;border-radius:12px;background:var(--plum);display:grid;place-items:center;color:#fff;flex:none}
+.fc-2{right:-18px;top:90px;animation:bob 7s ease-in-out -2s infinite}
+.fc-2 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3BAA74;margin-right:6px;box-shadow:0 0 0 4px rgba(59,170,116,.18)}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media(max-width:560px){.fc-1{left:-6px;bottom:30px}.fc-2{right:-6px;top:40px}}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg)}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:slide 38s linear infinite}
+.marquee span{font-family:var(--serif);font-size:clamp(26px,3vw,38px);white-space:nowrap;display:flex;align-items:center;gap:56px;color:var(--ink-2)}
+.marquee span::after{content:"✦";font-size:14px;color:var(--gold)}
+.marquee span:nth-child(even){font-style:italic;color:var(--plum)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{position:relative}
+.sec{padding:110px 0}
+@media(min-width:980px){.sec{padding:150px 0}}
+.sec-head{display:grid;gap:24px;margin-bottom:64px}
+@media(min-width:980px){.sec-head{grid-template-columns:1fr 1fr;align-items:end}}
+.dark{background:var(--plum-deep);color:#F5EDEA}
+.dark .lead{color:rgba(245,237,234,.72)}
+
+/* SIMULATOR */
+.sim{overflow:hidden}
+.sim::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 70% 40%,rgba(185,133,143,.22),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(184,155,110,.12),transparent 70%);pointer-events:none}
+.sim-grid{display:grid;gap:48px;align-items:center;position:relative}
+@media(min-width:980px){.sim-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+.sim-copy ul{list-style:none;margin-top:36px;display:grid;gap:0;border-top:1px solid var(--line-light)}
+.sim-copy li{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-light);font-size:15px;color:rgba(245,237,234,.8)}
+.sim-copy li b{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--gold-soft);min-width:34px;line-height:1.1}
+.stage{position:relative;border-radius:32px;background:linear-gradient(160deg,#2E1A23,#160A10 70%);border:1px solid var(--line-light);padding:22px;box-shadow:0 60px 120px -50px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.06)}
+.stage-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,234,.6);padding:4px 6px 0}
+.stage-top .live{display:flex;align-items:center;gap:8px}
+.stage-top .live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.arch-svg{width:100%;height:auto;display:block;margin:6px auto 0;max-height:520px}
+.stage .grid-bg{position:absolute;inset:22px;border-radius:20px;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(closest-side,#000 40%,transparent);-webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent);pointer-events:none}
+.controls{position:relative;display:grid;gap:18px;padding:8px 6px 4px}
+.ctrl-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.counter{font-family:var(--serif);font-size:30px;line-height:1}
+.counter small{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,234,.55);margin-left:8px}
+.toggle{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;padding:8px 14px 8px 8px;border-radius:999px;border:1px solid var(--line-light);color:#fff;transition:background .3s}
+.toggle .sw{width:36px;height:20px;border-radius:99px;background:rgba(255,255,255,.18);position:relative;transition:background .3s}
+.toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .35s var(--ease)}
+.toggle[aria-pressed="true"] .sw{background:var(--gold)}
+.toggle[aria-pressed="true"] .sw::after{transform:translateX(16px)}
+.range{-webkit-appearance:none;appearance:none;width:100%;height:36px;background:transparent;cursor:pointer}
+.range::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold) var(--p,0%),rgba(255,255,255,.14) var(--p,0%))}
+.range::-moz-range-track{height:4px;border-radius:4px;background:rgba(255,255,255,.14)}
+.range::-moz-range-progress{height:4px;border-radius:4px;background:var(--gold)}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;margin-top:-11px;box-shadow:0 0 0 6px rgba(184,155,110,.28),0 6px 16px rgba(0,0,0,.4)}
+.range::-moz-range-thumb{width:26px;height:26px;border:0;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(184,155,110,.28)}
+.ticks{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,234,.5);margin-top:-6px}
+.disclaimer{font-size:12px;color:rgba(245,237,234,.45);margin-top:18px}
+
+/* AUDIENCE */
+.aud{display:grid;gap:18px}
+@media(min-width:860px){.aud{grid-template-columns:repeat(3,1fr)}}
+.aud article{background:var(--surface);border-radius:var(--radius);padding:36px 32px 34px;border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s}
+.aud article:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(60,25,40,.4)}
+.aud .num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.1em}
+.aud h3{font-size:44px;margin:60px 0 14px}
+.aud p{color:var(--ink-2);font-size:15px}
+.aud .tag{position:absolute;top:30px;right:30px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:99px}
+.aud svg.deco{position:absolute;right:-30px;bottom:-30px;width:160px;opacity:.07}
+
+/* TREATMENTS */
+.feature{display:grid;gap:40px;border-radius:36px;background:linear-gradient(150deg,#FFFFFF 0%,#F3E9E6 100%);border:1px solid var(--line);padding:clamp(28px,5vw,64px);overflow:hidden;position:relative}
+@media(min-width:980px){.feature{grid-template-columns:1fr 1.1fr;align-items:center}}
+.feature h3{font-size:clamp(44px,5.4vw,72px);margin:20px 0 18px}
+.feature h3 em{font-style:italic;color:var(--plum)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 32px}
+.chips span{font-size:13px;font-weight:500;padding:9px 14px;border-radius:99px;background:rgba(90,45,63,.07);color:var(--plum)}
+.aligner-stage{position:relative;aspect-ratio:1/0.86;perspective:1400px;display:grid;place-items:center}
+.aligner-stage::before{content:"";position:absolute;inset:6% 4%;border-radius:50%;background:radial-gradient(closest-side,rgba(185,133,143,.35),rgba(185,133,143,0) 70%)}
+.aligner-3d{width:90%;transform-style:preserve-3d;transform:rotateX(42deg) rotateZ(-12deg) scale(1.05);animation:hover3d 8s ease-in-out infinite;position:relative;z-index:2;filter:drop-shadow(0 20px 26px rgba(70,30,45,.18))}
+@keyframes hover3d{50%{transform:rotateX(38deg) rotateZ(-6deg) scale(1.05) translateY(-10px)}}
+.aligner-shadow{position:absolute;width:62%;height:14%;bottom:8%;left:19%;border-radius:50%;background:radial-gradient(closest-side,rgba(60,25,40,.32),transparent);filter:blur(8px);animation:shadow 8s ease-in-out infinite;z-index:1}
+@keyframes shadow{50%{transform:scale(.88);opacity:.7}}
+.callout{position:absolute;z-index:3;font-size:12px;line-height:1.35;display:flex;align-items:center;gap:10px;color:var(--ink-2)}
+.callout b{display:block;font-size:13px;color:var(--ink)}
+.callout i{width:10px;height:10px;border-radius:50%;border:2px solid var(--plum);background:#fff;flex:none;box-shadow:0 0 0 6px rgba(90,45,63,.1)}
+.callout .bar{width:40px;height:1px;background:var(--plum);opacity:.4}
+.c1{top:6%;left:0}.c2{top:0;right:0;flex-direction:row-reverse;text-align:right}.c3{bottom:2%;right:4%;flex-direction:row-reverse;text-align:right}
+@media(max-width:560px){.callout .bar{width:16px}.callout{font-size:11px}.c1{top:0}.c2{display:none}}
+
+.tcards{display:grid;gap:18px;margin-top:18px}
+@media(min-width:860px){.tcards{grid-template-columns:1fr 1fr}}
+.tcard{border-radius:28px;padding:clamp(28px,4vw,44px);position:relative;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);background:var(--surface);transition:transform .5s var(--ease)}
+.tcard:hover{transform:translateY(-4px)}
+.tcard.alt{background:var(--plum);color:#fff;border:0}
+.tcard h3{font-size:clamp(36px,4vw,52px);margin-bottom:12px}
+.tcard p{max-width:38ch;color:var(--ink-2)}
+.tcard.alt p{color:rgba(255,255,255,.75)}
+.tcard .more{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;margin-top:28px}
+.tcard .more i{width:40px;height:40px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;transition:transform .4s var(--ease)}
+.tcard:hover .more i{transform:rotate(-45deg)}
+.tcard svg.ill{position:absolute;right:28px;top:28px;width:min(220px,44%);opacity:.95}
+.feature .more{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--plum)}
+
+/* CASES */
+.tabs{display:inline-flex;gap:4px;padding:5px;border-radius:99px;background:var(--surface);border:1px solid var(--line);margin-bottom:34px;flex-wrap:wrap}
+.tabs button{padding:11px 18px;border-radius:99px;font-size:14px;font-weight:600;color:var(--muted);transition:background .3s,color .3s}
+.tabs button sup{font-size:10px;margin-left:4px;opacity:.7}
+.tabs button[aria-selected="true"]{background:var(--plum);color:#fff}
+.cases{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:640px){.cases{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.cases{grid-template-columns:repeat(3,1fr)}}
+.ba{position:relative;aspect-ratio:9/8;border-radius:22px;overflow:hidden;background:#2a1a20;user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 30px 60px -40px rgba(40,15,25,.6)}
+.ba .layer{position:absolute;inset:0;background-size:100% 200%;background-repeat:no-repeat}
+.ba .after{background-position:50% 100%}
+.ba .before{background-position:50% 0%;clip-path:inset(0 calc(100% - var(--x,50%)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 18px rgba(0,0,0,.35)}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;border-radius:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A2D3F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;backdrop-filter:blur(8px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.ba .lbl{position:absolute;top:14px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(29,15,21,.55);backdrop-filter:blur(8px);padding:6px 10px;border-radius:99px}
+.ba .lbl.l{left:14px}.ba .lbl.r{right:14px}
+.ba input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:ew-resize}
+.cases-note{margin-top:26px;font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center}
+
+/* ===== INTERACTION LAYER ===== */
+.progress{position:fixed;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--plum),var(--gold));transform-origin:left;transform:scaleX(0);z-index:70}
+.nav ul a.active{color:var(--plum)}
+.nav ul a.active::after{transform:scaleX(1)}
+.cursor{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid #fff;mix-blend-mode:difference;pointer-events:none;z-index:100;opacity:0;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),opacity .3s}
+.cursor.on{opacity:1}
+.cursor.big{width:62px;height:62px;margin:-31px 0 0 -31px}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(520px circle at var(--mx,75%) var(--my,30%),rgba(185,133,143,.16),transparent 60%);pointer-events:none;transition:background .2s}
+.hero-grid{z-index:1}
+.btn-primary{will-change:transform}
+
+/* simulator extras */
+.stage{perspective:1400px}
+.arch-wrap{position:relative}
+.arch-svg{transition:transform .6s var(--ease);transform-style:preserve-3d}
+.arch-svg .tooth{cursor:pointer;transition:filter .25s}
+.arch-svg .tooth:hover,.arch-svg .tooth.hl{filter:brightness(1.06) drop-shadow(0 0 1.4px #E9C98F)}
+.arch-svg .shells,.arch-svg .br{pointer-events:none;transition:opacity .7s var(--ease)}
+.arch-svg .shells{opacity:0}.arch-svg[data-mode="aligner"] .shells{opacity:1}
+.arch-svg .br{opacity:0}.arch-svg[data-mode="braces"] .br{opacity:1}
+.seg{display:inline-flex;padding:4px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid var(--line-light);gap:2px}
+.seg button{padding:8px 14px;border-radius:99px;font-size:12.5px;font-weight:600;color:rgba(245,237,234,.7);transition:background .3s,color .3s}
+.seg button:hover{color:#fff}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--plum-deep)}
+.range-row{display:flex;gap:14px;align-items:center}
+.play{width:44px;height:44px;border-radius:50%;flex:none;background:var(--gold);color:var(--plum-deep);display:grid;place-items:center;transition:transform .3s var(--ease)}
+.play:hover{transform:scale(1.08)}
+.tip{position:absolute;left:0;top:0;pointer-events:none;z-index:5;background:rgba(255,255,255,.96);color:var(--ink);border-radius:12px;padding:8px 12px;font-size:12px;line-height:1.35;box-shadow:0 14px 30px -10px rgba(0,0,0,.55);opacity:0;transform:translate(-50%,calc(-100% - 10px)) scale(.94);transition:opacity .2s,transform .2s;white-space:nowrap}
+.tip.on{opacity:1;transform:translate(-50%,calc(-100% - 14px))}
+.tip b{display:block;font-size:13px}
+.tip::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:inherit;transform:translateX(-50%) rotate(45deg)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:rgba(245,237,234,.55)}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--gold)}
+
+/* aligner drag */
+.aligner-3d{animation:none!important;transition:none}
+.aligner-stage{cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.aligner-stage.drag{cursor:grabbing}
+.drag-hint{position:absolute;left:0;bottom:0;z-index:4;font-size:12px;font-weight:600;color:var(--plum);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border:1px solid var(--line);padding:9px 14px;border-radius:99px;display:flex;gap:8px;align-items:center;transition:opacity .5s}
+.drag-hint svg{animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.drag-hint.gone{opacity:0}
+
+/* quiz */
+.quiz-grid{display:grid;gap:48px;align-items:start}
+@media(min-width:980px){.quiz-grid{grid-template-columns:.8fr 1.2fr}}
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:32px;padding:clamp(24px,4vw,44px);box-shadow:0 50px 90px -60px rgba(60,25,40,.5);min-height:460px;position:relative;overflow:hidden}
+.quiz::before{content:"";position:absolute;width:420px;height:420px;right:-160px;top:-180px;background:radial-gradient(closest-side,rgba(185,133,143,.18),transparent);pointer-events:none}
+.q-top{display:flex;align-items:center;gap:18px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;position:relative}
+.q-bar{flex:1;height:3px;background:var(--bg-2);border-radius:3px;overflow:hidden}
+.q-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--plum),var(--rose));transition:width .6s var(--ease)}
+.q-body{margin-top:30px;animation:qin .6s var(--ease);position:relative}
+@keyframes qin{from{opacity:0;transform:translateX(26px)}}
+.q-body h3{font-size:clamp(30px,3.4vw,44px);margin-bottom:26px}
+.q-body h3 em{font-style:italic;color:var(--plum)}
+.opts{display:grid;gap:10px}
+@media(min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{text-align:left;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:var(--bg);display:flex;gap:14px;align-items:center;font-weight:600;font-size:15px;transition:transform .35s var(--ease),border-color .3s,background .3s,box-shadow .35s}
+.opt:hover,.opt:focus-visible{transform:translateY(-3px);border-color:var(--plum);background:#fff;box-shadow:0 18px 30px -22px rgba(60,25,40,.5);outline:none}
+.opt .k{width:32px;height:32px;border-radius:10px;background:var(--blush);color:var(--plum);display:grid;place-items:center;font-size:12px;flex:none;transition:background .3s,color .3s}
+.opt:hover .k{background:var(--plum);color:#fff}
+.opt small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.q-back{margin-top:24px;font-size:13px;color:var(--muted);font-weight:600;display:inline-flex;gap:8px;align-items:center}
+.q-back:hover{color:var(--plum)}
+.result .rtag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);background:var(--blush);padding:8px 12px;border-radius:99px;margin-bottom:18px}
+.result p{color:var(--ink-2);max-width:52ch}
+.result .note{font-size:12.5px;color:var(--muted);border-left:2px solid var(--gold);padding-left:12px;margin:20px 0 28px}
+.result .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.result .answers{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0}
+.result .answers span{font-size:12px;padding:6px 10px;border-radius:99px;border:1px solid var(--line);color:var(--ink-2)}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-10px;width:7px;height:12px;border-radius:2px;animation:fall 1.6s var(--ease) forwards}
+@keyframes fall{to{transform:translate(var(--dx),520px) rotate(var(--r));opacity:0}}
+
+/* contact form */
+.cform{position:relative;max-width:780px;margin:0 auto;text-align:left;background:rgba(255,255,255,.045);border:1px solid var(--line-light);border-radius:28px;padding:clamp(22px,4vw,40px);display:grid;gap:24px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.fld>span,.msg-preview>span{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:10px}
+.fld input{width:100%;height:56px;border-radius:14px;border:1px solid var(--line-light);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px;padding:0 18px;outline:none;transition:border-color .3s,background .3s}
+.fld input:focus{border-color:var(--gold);background:rgba(255,255,255,.09)}
+.fld input::placeholder{color:rgba(245,237,234,.4)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills button{padding:10px 16px;border-radius:99px;border:1px solid var(--line-light);font-size:14px;color:rgba(245,237,234,.85);transition:background .25s,border-color .25s,color .25s,transform .25s}
+.pills button:hover{border-color:rgba(255,255,255,.45)}
+.pills button[aria-pressed="true"]{background:var(--gold-soft);border-color:var(--gold-soft);color:var(--plum-deep);font-weight:600}
+.msg-preview{display:grid}
+.bubble{justify-self:end;max-width:min(520px,100%);background:#1E5B45;color:#EAF7EF;border-radius:16px 16px 4px 16px;padding:14px 16px 22px;font-size:14px;line-height:1.5;white-space:pre-line;position:relative;box-shadow:0 14px 30px -18px rgba(0,0,0,.7)}
+.bubble::after{content:"agora ✓✓";position:absolute;right:12px;bottom:5px;font-size:10px;color:rgba(234,247,239,.6)}
+.cform .btn{justify-self:start;background:#fff;color:var(--plum-deep);border:0;cursor:pointer}
+.cform .btn .ico{background:#1F9D57;color:#fff}
+.alt-links{display:flex;justify-content:center;gap:12px;margin-top:22px;flex-wrap:wrap}
+
+/* cases extras */
+.ba .zoom{position:absolute;right:12px;bottom:12px;z-index:3;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--plum);display:grid;place-items:center;backdrop-filter:blur(8px);transition:transform .3s var(--ease)}
+.ba .zoom:hover{transform:scale(1.1)}
+.ba .handle,.ba .lbl{pointer-events:none}
+dialog.lb{border:0;background:transparent;padding:0;margin:auto;width:min(980px,94vw);max-width:none;max-height:none;overflow:visible}
+dialog.lb::backdrop{background:rgba(20,8,14,.86);backdrop-filter:blur(6px)}
+.lb-in{position:relative;padding-top:58px}
+.lb .ba{width:min(100%,calc((100vh - 150px) * 9 / 8));margin:0 auto}
+.lb-bar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.lb-bar .btns{display:flex;gap:8px}
+.lb-bar button{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);transition:background .3s}
+.lb-bar button:hover{background:rgba(255,255,255,.25)}
+
+/* STEPS */
+.steps{display:grid;gap:0;counter-reset:s}
+@media(min-width:980px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{padding:40px 0;border-top:1px solid var(--line);position:relative}
+@media(min-width:980px){.step{padding:44px 40px 10px 0}.step+.step{padding-left:40px;border-left:1px solid var(--line)}}
+.step .n{font-family:var(--serif);font-size:96px;line-height:.8;color:transparent;-webkit-text-stroke:1px var(--rose)}
+.step h3{font-size:34px;margin:26px 0 12px}
+.step p{color:var(--ink-2);font-size:15px}
+
+/* FAQ */
+.faq-grid{display:grid;gap:48px}
+@media(min-width:980px){.faq-grid{grid-template-columns:.8fr 1.2fr}}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;cursor:pointer;font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.15}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);flex:none;position:relative;transition:background .3s,transform .4s var(--ease)}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .4s var(--ease)}
+details[open] summary .pm{background:var(--plum);border-color:var(--plum)}
+details[open] summary .pm::before,details[open] summary .pm::after{background:#fff}
+details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+details p{padding:0 60px 30px 0;color:var(--ink-2);max-width:64ch}
+
+/* CONTACT */
+.contact{overflow:hidden}
+.contact::before{content:"";position:absolute;width:1100px;height:1100px;left:50%;top:-500px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(185,133,143,.28),transparent 70%)}
+.contact .big{text-align:center;position:relative}
+.contact h2{font-size:clamp(56px,10vw,150px);margin:22px 0 26px}
+.contact .lead{margin:0 auto 40px;text-align:center}
+.info{display:grid;gap:0;margin-top:100px;border-top:1px solid var(--line-light);position:relative}
+@media(min-width:860px){.info{grid-template-columns:repeat(3,1fr)}}
+.info div{padding:32px 0;border-bottom:1px solid var(--line-light)}
+@media(min-width:860px){.info div{border-bottom:0;padding:36px 32px 0 0}.info div+div{padding-left:32px;border-left:1px solid var(--line-light)}}
+.info h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:14px}
+.info p{font-family:var(--serif);font-size:26px;line-height:1.25}
+.info a.u{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px}
+footer{background:var(--plum-deep);color:rgba(245,237,234,.5);font-size:13px;padding:28px 0 40px;border-top:1px solid var(--line-light)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a:hover{color:#fff}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1F9D57;display:grid;place-items:center;box-shadow:0 16px 36px -10px rgba(31,157,87,.65);transition:transform .4s var(--ease)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #1F9D57;animation:ping 2.6s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.7}to{transform:scale(1.6);opacity:0}}
+
+.reveal{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero h1 .line span{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+<div class="cursor" id="cur" aria-hidden="true"></div>
+<dialog class="lb" id="lb" aria-label="Caso ampliado">
+  <div class="lb-in">
+    <div class="lb-bar"><span id="lbCap"></span><div class="btns"><button id="lbPrev" aria-label="Caso anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button id="lbNext" aria-label="Próximo caso"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button><button id="lbX" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>
+    <div id="lbSlot"></div>
+  </div>
+</dialog>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Dra. Gabriela Dantas, início">
+      <img src="assets/logo-gd.webp" alt="">
+      <div><b>Gabriela Dantas</b><small>Ortodontia</small></div>
+    </a>
+    <ul>
+      <li><a href="#planejamento">Planejamento</a></li>
+      <li><a href="#tratamentos">Tratamentos</a></li>
+      <li><a href="#teste">Teste</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#consulta">Consulta</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <a class="btn btn-primary wa" href="#" target="_blank" rel="noopener"><span class="lbl">Falar com a Dra.</span><span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+  </div>
+</header>
+
+<main id="topo">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Ortodontista · Brooklin, São Paulo</span>
+      <h1><span class="line"><span>Olá, eu sou a</span></span><span class="line"><span><em>Dra. Gabriela Dantas.</em></span></span></h1>
+      <p class="lead">Sou especialista em Ortodontia e acompanho você em cada etapa do tratamento, do planejamento à contenção, sempre com cuidado e atenção ao seu sorriso.</p>
+      <div class="ctas">
+        <a class="btn btn-primary wa" href="#" target="_blank" rel="noopener">Marcar minha avaliação <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+        <a class="btn btn-ghost" href="#casos">Ver casos tratados</a>
+      </div>
+      <div class="creds">
+        <div><b>CRO-SP</b><span>141418 · Cirurgiã-dentista</span></div>
+        <div><b>Especialista</b><span>em Ortodontia</span></div>
+        <div><b><span class="count" data-to="35">35</span> casos</b><span>publicados com autorização</span></div>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ring"></div>
+      <div class="frame"><img src="assets/retrato.avif" alt="Retrato da Dra. Gabriela Dantas, ortodontista" fetchpriority="high"></div>
+      <div class="float-card fc-1"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-3 0-5 1.5-6.5 1.5S3 4 3 7c0 4 1.5 6 2.5 9s1 5 2.5 5 1.5-4 4-4 2.5 4 4 4 1.5-2 2.5-5 2.5-5 2.5-9c0-3-1-2.5-2.5-2.5S15 3 12 3z"/></svg></i><div><b>Do planejamento à contenção</b><span>Acompanhamento em cada etapa</span></div></div>
+      <div class="float-card fc-2"><b><span class="dot"></span>Agenda aberta</b><span>Seg a sex 9h–18h · Sáb 9h–12h</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Alinhadores invisíveis</span><span>Aparelho metálico</span><span>Ortopedia infantil</span><span>Adultos</span><span>Adolescentes</span><span>Crianças a partir dos 6 anos</span>
+  <span>Alinhadores invisíveis</span><span>Aparelho metálico</span><span>Ortopedia infantil</span><span>Adultos</span><span>Adolescentes</span><span>Crianças a partir dos 6 anos</span>
+</div></div>
+
+<!-- SIMULATOR -->
+<section class="sec dark sim" id="planejamento">
+  <div class="wrap sim-grid">
+    <div class="sim-copy reveal">
+      <span class="eyebrow">Planejamento do sorriso</span>
+      <h2 style="margin:22px 0 24px">Veja os dentes <em>se movendo</em>, etapa por etapa.</h2>
+      <p class="lead">Na avaliação, apresento as possibilidades de tratamento, explico as etapas, o tempo estimado e os cuidados necessários, para você decidir com tranquilidade e segurança.</p>
+      <ul>
+        <li><b>01</b>Arraste a linha do tempo e acompanhe o alinhamento da arcada.</li>
+        <li><b>02</b>Compare: alinhador transparente ou aparelho fixo sobre os mesmos dentes.</li>
+        <li><b>03</b>Passe o mouse ou toque em um dente para conhecer o nome dele.</li>
+      </ul>
+    </div>
+    <div class="stage reveal" id="stage">
+      <div class="grid-bg"></div>
+      <div class="stage-top"><span class="live">Arcada superior · vista oclusal</span><span id="stageLabel">Início</span></div>
+      <div class="arch-wrap"><svg class="arch-svg" id="arch" data-mode="natural" viewBox="-62 -14 124 92" role="img" aria-label="Ilustração de uma arcada dentária superior passando de dentes desalinhados para alinhados"></svg></div>
+      <div class="tip" id="tip"></div>
+      <div class="controls">
+        <div class="ctrl-row">
+          <div class="counter" id="counter">Etapa 1<small>de 24</small></div>
+          <div class="seg" id="mode" role="group" aria-label="Visualização">
+            <button data-m="natural" aria-pressed="true">Natural</button>
+            <button data-m="aligner" aria-pressed="false">Alinhador</button>
+            <button data-m="braces" aria-pressed="false">Aparelho fixo</button>
+          </div>
+        </div>
+        <div class="range-row">
+          <button class="play" id="play" aria-label="Reproduzir simulação"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></button>
+          <input class="range" id="progress" type="range" min="0" max="1000" value="0" aria-label="Progresso do tratamento">
+        </div>
+        <div class="ticks"><span>Antes</span><span>Meio do tratamento</span><span>Depois</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><p class="disclaimer">Ilustração com fins educativos. O resultado e a duração dependem da avaliação individual de cada paciente.</p></div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="sec" id="publico">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Quem eu atendo</span><h2 style="margin-top:22px">Um cuidado para <em>cada fase</em> da vida.</h2></div>
+      <p class="lead">Tratamentos ortodônticos personalizados, que acompanham o desenvolvimento, a rotina e as expectativas de cada paciente.</p>
+    </div>
+    <div class="aud">
+      <article class="reveal"><span class="num">01</span><span class="tag">Adultos</span><h3>Adultos</h3><p>Tratamentos ortodônticos personalizados para alinhar os dentes, corrigir a mordida e melhorar a harmonia do sorriso, com opções que se adaptam às suas necessidades e ao seu estilo de vida.</p></article>
+      <article class="reveal" style="transition-delay:.1s"><span class="num">02</span><span class="tag">Adolescentes</span><h3>Adolescentes</h3><p>Tratamentos ortodônticos para alinhar os dentes, corrigir a mordida e acompanhar o desenvolvimento da dentição, promovendo um sorriso saudável e harmonioso.</p></article>
+      <article class="reveal" style="transition-delay:.2s"><span class="num">03</span><span class="tag">A partir de 6 anos</span><h3>Crianças</h3><p>A partir dos 6 anos, com foco no crescimento e desenvolvimento dos ossos da face, correção de alterações na mordida e tratamentos de ortopedia funcional dos maxilares, quando indicados.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="sec" id="tratamentos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Tratamentos</span><h2 style="margin-top:22px">Tecnologia a favor do <em>seu sorriso</em>.</h2></div>
+      <p class="lead">Do alinhador transparente ao aparelho tradicional, a indicação certa nasce de um diagnóstico cuidadoso.</p>
+    </div>
+
+    <div class="feature reveal">
+      <div>
+        <span class="eyebrow">Destaque</span>
+        <h3>Alinhadores <em>invisíveis</em></h3>
+        <p class="lead">Transparência, conforto e liberdade para transformar seu sorriso. Placas removíveis, feitas sob medida, que movimentam os dentes de forma gradual a cada nova etapa.</p>
+        <div class="chips"><span>Transparentes</span><span>Removíveis</span><span>Feitos sob medida</span><span>Sem fios e braquetes</span></div>
+        <a class="more" href="https://site-dra-gabriela.orto-digital.workers.dev/tratamentos/alinhadores-invisiveis">Saiba mais sobre alinhadores <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="aligner-stage" aria-hidden="true">
+        <div class="aligner-shadow"></div>
+        <svg class="aligner-3d" id="alignerProduct" viewBox="-46 -12 92 86"></svg>
+        <div class="callout c1"><i></i><span class="bar"></span><div><b>Transparente</b>Quase imperceptível no dia a dia</div></div>
+        <div class="callout c2"><i></i><span class="bar"></span><div><b>Sob medida</b>Feito para a sua arcada</div></div>
+        <div class="drag-hint" id="dragHint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg>Arraste para girar</div>
+        <div class="callout c3"><i></i><span class="bar"></span><div><b>Removível</b>Para comer e higienizar</div></div>
+      </div>
+    </div>
+
+    <div class="tcards">
+      <a class="tcard reveal" href="https://site-dra-gabriela.orto-digital.workers.dev/tratamentos/aparelho-metalico">
+        <svg class="ill" viewBox="0 0 200 140" fill="none"><g id="braces"></g></svg>
+        <div><span class="eyebrow">Tradicional</span></div>
+        <div><h3>Aparelho metálico</h3><p>Um tratamento tradicional, versátil e eficiente!</p><span class="more">Saiba mais <i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></i></span></div>
+      </a>
+      <a class="tcard alt reveal" style="transition-delay:.1s" href="https://site-dra-gabriela.orto-digital.workers.dev/tratamentos/ortopedia-infantil">
+        <svg class="ill" viewBox="0 0 200 160" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"><circle cx="120" cy="70" r="30"/><circle cx="120" cy="70" r="52" stroke-dasharray="2 6"/><circle cx="120" cy="70" r="76" stroke-dasharray="1 8"/><path d="M120 18v-10M120 132v10M68 70h-10M172 70h10" stroke="rgba(217,198,165,.8)"/><circle cx="120" cy="70" r="4" fill="rgba(217,198,165,.9)" stroke="none"/></svg>
+        <div><span class="eyebrow" style="color:var(--gold-soft)">Crescimento</span></div>
+        <div><h3>Ortopedia infantil</h3><p>Aparelhos que orientam o desenvolvimento craniofacial durante o crescimento da criança.</p><span class="more">Saiba mais <i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></i></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="sec" id="teste" style="padding-top:0">
+  <div class="wrap quiz-grid">
+    <div class="reveal">
+      <span class="eyebrow">Teste rápido · 30 segundos</span>
+      <h2 style="margin-top:22px">Qual tratamento <em>combina</em> com você?</h2>
+      <p class="lead" style="margin-top:22px">Responda três perguntas e receba uma orientação inicial. A indicação definitiva é sempre feita na avaliação.</p>
+    </div>
+    <div class="quiz reveal" id="quiz">
+      <div class="q-top"><span id="qStep">Pergunta 1 de 3</span><div class="q-bar"><i id="qBar"></i></div></div>
+      <div class="q-body" id="qBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="sec" id="casos" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Casos tratados</span><h2 style="margin-top:22px">Antes e depois, <em>lado a lado</em>.</h2></div>
+      <p class="lead">Arraste a linha sobre cada foto para comparar o início e o resultado do tratamento.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button role="tab" aria-selected="true" data-cat="alinhador">Alinhadores invisíveis<sup>14</sup></button>
+      <button role="tab" aria-selected="false" data-cat="fixo">Aparelho fixo<sup>9</sup></button>
+      <button role="tab" aria-selected="false" data-cat="ortopedia">Ortopedia infantil<sup>12</sup></button>
+    </div>
+    <div class="cases" id="cases"></div>
+    <p class="cases-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Imagens publicadas com autorização por escrito dos pacientes.</p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec" id="consulta">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Sua primeira consulta</span><h2 style="margin-top:22px">Tudo começa com <em>uma conversa</em>.</h2></div>
+      <p class="lead">Uma avaliação sem pressa, para entender você antes de falar de aparelho.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Conversamos sobre você</h3><p>Quero conhecer suas expectativas, entender o que incomoda você no sorriso e ouvir o que deseja alcançar com o tratamento.</p></div>
+      <div class="step reveal" style="transition-delay:.1s"><div class="n">02</div><h3>Avalio seu sorriso</h3><p>Examino o alinhamento dos dentes, a mordida e as estruturas relacionadas à função mastigatória. Quando necessário, solicito exames complementares para aprofundar o diagnóstico.</p></div>
+      <div class="step reveal" style="transition-delay:.2s"><div class="n">03</div><h3>Planejamos seu tratamento</h3><p>Apresento as possibilidades de tratamento, explico as etapas, o tempo estimado e os cuidados necessários para que você possa decidir com tranquilidade e segurança.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="duvidas" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="reveal"><span class="eyebrow">Dúvidas</span><h2 style="margin-top:22px">Perguntas que <em>sempre</em> me fazem.</h2></div>
+    <div class="reveal">
+      <details open><summary>Aparelho dói?<span class="pm"></span></summary><p>É normal sentir um pouco de sensibilidade nos dentes nos primeiros dias após a instalação do aparelho ou cada ajuste. Essa sensação é temporária e costuma diminuir rapidamente. Durante o tratamento, oriento você sobre os cuidados que ajudam a deixar essa fase mais confortável.</p></details>
+      <details><summary>Quanto tempo dura o tratamento?<span class="pm"></span></summary><p>O tempo varia de acordo com a complexidade de cada caso e os objetivos do tratamento. Na avaliação inicial, analiso suas necessidades e apresento uma estimativa de duração, para que você possa se planejar com tranquilidade.</p></details>
+      <details><summary>Posso trocar o aparelho fixo pelo alinhador invisível?<span class="pm"></span></summary><p>Em muitos casos, sim! A possibilidade de troca depende do planejamento e das necessidades de cada caso. Na avaliação, analiso se os alinhadores conseguem realizar os movimentos necessários para dar continuidade ao seu tratamento com segurança e previsibilidade.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec dark contact" id="contato">
+  <div class="wrap">
+    <div class="big reveal">
+      <span class="eyebrow">Agende sua avaliação</span>
+      <h2>Vamos <em>conversar?</em></h2>
+      <p class="lead">Me conte um pouquinho sobre você e qual tratamento procura. Minha equipe entrará em contato para entender suas necessidades e apresentar os horários disponíveis para sua avaliação.</p>
+      <form class="cform" id="cform">
+        <label class="fld"><span>Seu nome</span><input name="nome" autocomplete="given-name" placeholder="Como posso te chamar?"></label>
+        <div class="fld"><span>Tratamento de interesse</span><div class="pills" data-name="trat"><button type="button" aria-pressed="false">Alinhadores invisíveis</button><button type="button" aria-pressed="false">Aparelho metálico</button><button type="button" aria-pressed="false">Ortopedia infantil</button><button type="button" aria-pressed="false">Ainda não sei</button></div></div>
+        <div class="fld"><span>Para quem é</span><div class="pills" data-name="quem"><button type="button" aria-pressed="false">Para mim</button><button type="button" aria-pressed="false">Para meu filho(a)</button><button type="button" aria-pressed="false">Para outra pessoa</button></div></div>
+        <div class="fld"><span>Melhor período</span><div class="pills" data-name="periodo"><button type="button" aria-pressed="false">Manhã</button><button type="button" aria-pressed="false">Tarde</button><button type="button" aria-pressed="false">Sábado de manhã</button></div></div>
+        <div class="msg-preview"><span>Prévia da sua mensagem</span><div class="bubble" id="preview"></div></div>
+        <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></button>
+      </form>
+      <div class="alt-links"><a class="btn btn-ghost" href="https://www.instagram.com/gabidantasn/" target="_blank" rel="noopener">Instagram @gabidantasn</a></div>
+    </div>
+    <div class="info reveal">
+      <div><h4>Endereço</h4><p>Rua Princesa Isabel, 94, sala 85<br>Brooklin, São Paulo/SP</p><a class="u" href="https://maps.app.goo.gl/Q8hMu2MKnbZ6N1qJ9" target="_blank" rel="noopener">Como chegar ↗</a></div>
+      <div><h4>Horários</h4><p>Seg a sex, das 9h às 18h<br>Sáb, das 9h às 12h</p></div>
+      <div><h4>Instagram</h4><p>@gabidantasn</p><a class="u" href="https://www.instagram.com/gabidantasn/" target="_blank" rel="noopener">Acompanhar ↗</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Dra. Gabriela Dantas · Cirurgiã-dentista, CRO-SP 141418 · Especialista em Ortodontia</span><a href="https://site-dra-gabriela.orto-digital.workers.dev/politica-de-privacidade">Política de privacidade</a></div></footer>
+
+<a class="wa-float wa" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.4 11.4 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<script>
+(() => {
+const PHONE = "5511966480912";
+const waLink = msg => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+document.querySelectorAll("a.wa").forEach(a => a.href = waLink("Olá, Dra. Gabriela! Vim pelo site e quero marcar uma avaliação."));
+const fine = matchMedia("(pointer:fine)").matches;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = s => document.querySelector(s);
+
+/* ---------- nav, progress, active link ---------- */
+const nav = $("#nav"), prog = $("#prog");
+const onScroll = () => {
+  nav.classList.toggle("scrolled", scrollY > 20);
+  const h = document.documentElement.scrollHeight - innerHeight;
+  prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+};
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+const links = [...document.querySelectorAll(".nav ul a")];
+const secObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+}), {rootMargin:"-45% 0px -50% 0px"});
+links.forEach(a => { const s = document.querySelector(a.getAttribute("href")); if (s) secObs.observe(s); });
+
+/* ---------- reveal + count-up ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+document.querySelectorAll(".count").forEach(el => {
+  const to = +el.dataset.to;
+  new IntersectionObserver((es, o) => {
+    if (!es[0].isIntersecting) return; o.disconnect(); if (reduce) return;
+    const t0 = performance.now();
+    (function f(n){ const k = Math.min(1, (n - t0) / 1500); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(f); })(t0);
+  }).observe(el);
+});
+
+/* ---------- cursor, magnetic buttons, hero spotlight ---------- */
+if (fine && !reduce){
+  const cur = $("#cur"); let cx = -100, cy = -100, tx = -100, ty = -100;
+  addEventListener("pointermove", e => {
+    tx = e.clientX; ty = e.clientY; cur.classList.add("on");
+    cur.classList.toggle("big", !!e.target.closest("a,button,input,label,.ba,.aligner-stage,.tooth"));
+  }, {passive:true});
+  document.addEventListener("pointerleave", () => cur.classList.remove("on"));
+  (function loop(){ cx += (tx - cx) * .2; cy += (ty - cy) * .2; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
+  document.querySelectorAll(".btn-primary").forEach(b => {
+    b.addEventListener("pointermove", e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width/2) * .18}px,${(e.clientY - r.top - r.height/2) * .3}px)`; });
+    b.addEventListener("pointerleave", () => b.style.transform = "");
+  });
+  const hero = $(".hero");
+  hero.addEventListener("pointermove", e => { const r = hero.getBoundingClientRect(); hero.style.setProperty("--mx", (e.clientX - r.left) + "px"); hero.style.setProperty("--my", (e.clientY - r.top) + "px"); });
+}
+
+/* ============ DENTAL ARCH GENERATOR ============ */
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+const SC = 1.12;
+const TEETH = [
+  {type:"inc", w:8.6, d:7.0, name:"Incisivo central"},
+  {type:"lat", w:6.6, d:6.2, name:"Incisivo lateral"},
+  {type:"can", w:7.6, d:8.0, name:"Canino"},
+  {type:"pm",  w:7.0, d:9.0, name:"1º pré-molar"},
+  {type:"pm",  w:6.6, d:8.8, name:"2º pré-molar"},
+  {type:"mol", w:10.2,d:11.0, name:"1º molar"},
+  {type:"mol", w:9.2, d:10.6, name:"2º molar"},
+].map(t => ({...t, w:t.w*SC, d:t.d*SC}));
+const K = 0.068;
+const LUT = []; { let s = 0, px = 0, py = 0; for (let x = 0; x <= 40; x += 0.02){ const y = K*x*x; s += Math.hypot(x-px, y-py); LUT.push([s,x]); px = x; py = y; } }
+function atArc(s){ let lo = 0, hi = LUT.length - 1; while (hi - lo > 1){ const m = (lo + hi) >> 1; (LUT[m][0] < s ? lo = m : hi = m); } const x = LUT[hi][1]; return {x, y:K*x*x, a:Math.atan(2*K*x)*180/Math.PI}; }
+const PLACE = []; { let s = 0.15; TEETH.forEach(t => { PLACE.push(atArc(s + t.w/2)); s += t.w + 0.25; }); }
+
+function outline(t, grow = 0){
+  const w = t.w + grow, d = t.d + grow, P = [];
+  const [n, taper] = {inc:[2.4,.42], lat:[2.3,.38], can:[1.55,.18], pm:[2.5,.10], mol:[3.2,.10]}[t.type];
+  for (let i = 0; i < 64; i++){
+    const th = i/64*Math.PI*2, c = Math.cos(th), s = Math.sin(th);
+    let x = (w/2)*Math.sign(c)*Math.pow(Math.abs(c), 2/n);
+    let y = (d/2)*Math.sign(s)*Math.pow(Math.abs(s), 2/n);
+    x *= 1 - taper*(y/(d/2)+1)/2*1.6 + taper*0.3;
+    if (t.type === "mol") x += y*0.12;
+    P.push([x,y]);
+  }
+  return "M" + P.map(p => p[0].toFixed(2) + "," + p[1].toFixed(2)).join("L") + "Z";
+}
+function grooves(t){
+  const w = t.w, d = t.d;
+  switch (t.type){
+    case "inc": case "lat": return `M${-w*.36},${-d*.18} Q0,${-d*.3} ${w*.36},${-d*.18}`;
+    case "can": return `M0,${-d*.28} L0,${d*.05} M${-w*.3},${-d*.02} L0,${-d*.06} L${w*.3},0`;
+    case "pm":  return `M${-w*.32},${d*.02} Q0,${d*.12} ${w*.32},${d*.02}`;
+    case "mol": return `M${-w*.34},${-d*.04} Q${-w*.05},${d*.06} ${w*.36},${-d*.02} M${-w*.02},${-d*.36} Q${w*.04},0 ${-w*.06},${d*.34}`;
+  }
+}
+const MIS = {
+  R:[[-16,-1.6,.5],[24,1.8,-.9],[-12,-2.6,-1.2],[14,.9,.2],[-9,-.6,.3],[5,.2,0],[-3,0,0]],
+  L:[[12,1.1,.3],[-28,-2.2,.9],[18,-1.9,-.8],[-10,1.0,0],[7,.5,-.2],[-4,.1,0],[2,0,0]],
+};
+// smooth path through points (Catmull-Rom)
+function smooth(pts){
+  let d = `M${pts[0][0].toFixed(2)},${pts[0][1].toFixed(2)}`;
+  for (let i = 0; i < pts.length - 1; i++){
+    const p0 = pts[i-1] || pts[i], p1 = pts[i], p2 = pts[i+1], p3 = pts[i+2] || p2;
+    const c1 = [p1[0] + (p2[0]-p0[0])/6, p1[1] + (p2[1]-p0[1])/6], c2 = [p2[0] - (p3[0]-p1[0])/6, p2[1] - (p3[1]-p1[1])/6];
+    d += `C${c1[0].toFixed(2)},${c1[1].toFixed(2)} ${c2[0].toFixed(2)},${c2[1].toFixed(2)} ${p2[0].toFixed(2)},${p2[1].toFixed(2)}`;
+  }
+  return d;
+}
+
+function buildArch(svg, mode){
+  const id = svg.id, defs = el("defs", {}, svg);
+  defs.innerHTML = `
+    <radialGradient id="${id}-enamel" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#F7F1E7"/><stop offset="1" stop-color="#DCCDB8"/></radialGradient>
+    <radialGradient id="${id}-palate" cx="50%" cy="30%" r="70%"><stop offset="0" stop-color="#F4C9C7"/><stop offset="1" stop-color="#D98F96"/></radialGradient>
+    <linearGradient id="${id}-gum" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8A2A6"/><stop offset="1" stop-color="#C9737E"/></linearGradient>
+    <linearGradient id="${id}-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".85"/><stop offset=".45" stop-color="#E9F1F6" stop-opacity=".25"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".55"/></linearGradient>
+    <linearGradient id="${id}-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBFCFD"/><stop offset=".5" stop-color="#B9C1C9"/><stop offset="1" stop-color="#7E8892"/></linearGradient>
+    <filter id="${id}-sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy=".7" stdDeviation=".7" flood-color="#3a1420" flood-opacity=".35"/></filter>
+    <filter id="${id}-soft"><feGaussianBlur stdDeviation="1.6"/></filter>`;
+  const end = PLACE[6], spine = [];
+  for (let x = -end.x - 1.2; x <= end.x + 1.2; x += 0.5) spine.push([x, K*x*x]);
+  const spineD = "M" + spine.map(p => p[0].toFixed(2) + "," + p[1].toFixed(2)).join("L");
+
+  if (mode === "full"){
+    const pal = "M" + spine.map(([x,y]) => { const a = Math.atan(2*K*x); return [(x - Math.sin(a)*6).toFixed(2), (y + Math.cos(a)*6).toFixed(2)].join(","); }).join("L") + "Z";
+    el("path", {d:pal, fill:`url(#${id}-palate)`}, svg);
+    const rug = el("g", {stroke:"#C77C86","stroke-width":".5",fill:"none","stroke-linecap":"round",opacity:".55"}, svg);
+    [[14,9],[19,12],[24,13]].forEach(([y,hw]) => el("path", {d:`M${-hw},${y+2} Q${-hw/2},${y-2} -1.2,${y} M${hw},${y+2} Q${hw/2},${y-2} 1.2,${y}`}, rug));
+    el("path", {d:"M0,9 L0,60", stroke:"#C77C86","stroke-width":".45",opacity:".5"}, svg);
+    el("path", {d:spineD, stroke:`url(#${id}-gum)`, "stroke-width":"14.5", fill:"none","stroke-linecap":"round","stroke-linejoin":"round"}, svg);
+    el("path", {d:spineD, stroke:"#F2B9BB", "stroke-width":"10", fill:"none","stroke-linecap":"round",opacity:".55",filter:`url(#${id}-soft)`}, svg);
+  } else {
+    el("path", {d:spineD, stroke:"rgba(110,140,160,.35)", "stroke-width":"14.6", fill:"none","stroke-linecap":"round"}, svg);
+    el("path", {d:spineD, stroke:"rgba(232,242,248,.92)", "stroke-width":"13.8", fill:"none","stroke-linecap":"round"}, svg);
+  }
+
+  const teethG = el("g", {}, svg);
+  const wire = mode === "full" ? el("path", {class:"br", fill:"none", stroke:"#9AA3AC", "stroke-width":".55", "stroke-linecap":"round"}, svg) : null;
+  const wireHi = mode === "full" ? el("path", {class:"br", fill:"none", stroke:"#fff", "stroke-width":".18", opacity:".8"}, svg) : null;
+  const brG = el("g", {class:"br"}, svg);
+  const shellG = el("g", {class:"shells"}, svg);
+  const nodes = [];
+  ["R","L"].forEach(side => {
+    const mirror = side === "L" ? "scale(-1,1)" : "";
+    const sideG = el("g", {transform:mirror}, teethG), sideB = el("g", {transform:mirror}, brG), sideS = el("g", {transform:mirror}, shellG);
+    TEETH.forEach((t, i) => {
+      const fdi = (side === "L" ? 10 : 20) + i + 1;
+      const g = el("g", {class:"tooth", "data-name":t.name, "data-fdi":fdi}, sideG);
+      if (mode === "full"){
+        el("path", {d:outline(t), fill:`url(#${id}-enamel)`, stroke:"#CBB9A2","stroke-width":".28",filter:`url(#${id}-sh)`}, g);
+        el("path", {d:grooves(t), fill:"none", stroke:"#BFA98F","stroke-width":".32","stroke-linecap":"round",opacity:".75"}, g);
+        el("ellipse", {cx:-t.w*.12, cy:-t.d*.16, rx:t.w*.18, ry:t.d*.08, fill:"#fff", opacity:".7"}, g);
+      } else {
+        el("path", {d:outline(t,.9), fill:`url(#${id}-glass)`, stroke:"rgba(110,140,160,.55)","stroke-width":".4",filter:`url(#${id}-sh)`}, g);
+        el("path", {d:outline(t,-1.4), fill:"rgba(205,222,232,.35)", stroke:"rgba(255,255,255,.95)","stroke-width":".45"}, g);
+        el("path", {d:grooves(t), fill:"none", stroke:"rgba(110,140,160,.55)","stroke-width":".35","stroke-linecap":"round"}, g);
+        el("ellipse", {cx:-t.w*.15, cy:-t.d*.2, rx:t.w*.22, ry:t.d*.08, fill:"#fff", opacity:".95"}, g);
+      }
+      const br = el("g", {}, sideB), shell = el("g", {}, sideS);
+      if (mode === "full"){
+        const by = -t.d/2 - .1, bw = t.type === "mol" ? 3.6 : 2.8;
+        el("rect", {x:-bw/2, y:by-1.15, width:bw, height:2.3, rx:.45, fill:`url(#${id}-metal)`, stroke:"#6E7882", "stroke-width":".18"}, br);
+        el("rect", {x:-bw/2+.35, y:by-.22, width:bw-.7, height:.44, fill:"#5E6872", opacity:".7"}, br);
+        if (t.type !== "mol") el("circle", {cx:0, cy:by, r:1.15, fill:"none", stroke:"#B9858F", "stroke-width":".38"}, br);
+        el("path", {d:outline(t,1.1), fill:"rgba(220,236,246,.22)", stroke:"rgba(255,255,255,.85)","stroke-width":".35"}, shell);
+        el("ellipse", {cx:-t.w*.18, cy:-t.d*.24, rx:t.w*.22, ry:t.d*.06, fill:"#fff", opacity:".55"}, shell);
+      }
+      nodes.push({g, br, shell, side, i, t});
+    });
+  });
+  if (mode === "full") shellG.insertBefore(el("path", {d:spineD, stroke:"rgba(225,240,248,.12)", "stroke-width":"12", fill:"none","stroke-linecap":"round"}), shellG.firstChild);
+
+  function set(p){
+    const f = 1 - p, pts = {R:[], L:[]};
+    nodes.forEach(({g, br, shell, side, i, t}) => {
+      const pl = PLACE[i], [r, dv, du] = MIS[side][i];
+      const a = pl.a*Math.PI/180;
+      const X = pl.x + Math.cos(a)*du*f - Math.sin(a)*dv*f;
+      const Y = pl.y + Math.sin(a)*du*f + Math.cos(a)*dv*f;
+      const A = pl.a + r*f, tr = `translate(${X.toFixed(3)},${Y.toFixed(3)}) rotate(${A.toFixed(2)})`;
+      g.setAttribute("transform", tr); br.setAttribute("transform", tr); shell.setAttribute("transform", tr);
+      if (wire){
+        const ar = A*Math.PI/180, ly = -t.d/2 - .1;
+        const wx = X - Math.sin(ar)*ly, wy = Y + Math.cos(ar)*ly;
+        pts[side][i] = [side === "L" ? -wx : wx, wy];
+      }
+    });
+    if (wire){
+      const all = [...pts.L.slice().reverse(), ...pts.R];
+      const d = smooth(all); wire.setAttribute("d", d); wireHi.setAttribute("d", d);
+    }
+  }
+  return {set};
+}
+
+/* ---------- simulator ---------- */
+const archSvg = $("#arch"), stage = $("#stage"), tip = $("#tip");
+const arch = buildArch(archSvg, "full");
+const range = $("#progress"), counter = $("#counter"), label = $("#stageLabel");
+const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2)/2;
+let userTouched = false, playing = 0;
+function update(){
+  const v = range.value/1000;
+  arch.set(ease(v));
+  range.style.setProperty("--p", (v*100) + "%");
+  counter.innerHTML = `Etapa ${Math.max(1, Math.round(v*24))}<small>de 24</small>`;
+  label.textContent = v < .04 ? "Início" : v > .96 ? "Resultado" : "Em tratamento";
+}
+range.addEventListener("input", () => { userTouched = true; cancelAnimationFrame(playing); update(); });
+update();
+const segBtns = [...document.querySelectorAll("#mode button")];
+function setMode(m){ archSvg.dataset.mode = m; segBtns.forEach(b => b.setAttribute("aria-pressed", b.dataset.m === m)); }
+segBtns.forEach(b => b.addEventListener("click", () => { userTouched = true; setMode(b.dataset.m); }));
+function play(then){
+  cancelAnimationFrame(playing);
+  if (reduce){ range.value = 1000; update(); then && then(); return; }
+  const from = +range.value >= 990 ? 0 : +range.value, t0 = performance.now(), dur = 3200 * (1 - from/1000) + 200;
+  (function tick(now){
+    const k = Math.min(1, Math.max(0, (now - t0)/dur));
+    range.value = from + (1000 - from)*k; update();
+    if (k < 1) playing = requestAnimationFrame(tick); else then && then();
+  })(t0);
+}
+$("#play").addEventListener("click", () => { userTouched = true; range.value = 0; update(); setTimeout(() => play(), 250); });
+new IntersectionObserver((es, o) => es.forEach(e => {
+  if (!e.isIntersecting) return; o.disconnect();
+  setTimeout(() => { if (!userTouched) play(() => setTimeout(() => { if (!userTouched) setMode("aligner"); }, 700)); }, 500);
+}), {threshold:.45}).observe(stage);
+
+// tooth tooltip
+function showTip(t, x, y){
+  const r = stage.getBoundingClientRect(), fdi = +t.dataset.fdi;
+  tip.innerHTML = `<b>${t.dataset.name}</b>Dente ${fdi} · lado ${fdi < 20 ? "direito" : "esquerdo"}`;
+  tip.style.left = (x - r.left) + "px"; tip.style.top = (y - r.top) + "px"; tip.classList.add("on");
+}
+const hideTip = () => tip.classList.remove("on");
+archSvg.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; const t = e.target.closest(".tooth"); t ? showTip(t, e.clientX, e.clientY) : hideTip(); });
+archSvg.addEventListener("pointerleave", hideTip);
+archSvg.addEventListener("click", e => {
+  const t = e.target.closest(".tooth"); if (!t) return hideTip();
+  document.querySelectorAll("#arch .tooth.hl").forEach(x => x.classList.remove("hl"));
+  t.classList.add("hl"); const r = t.getBoundingClientRect(); showTip(t, r.left + r.width/2, r.top);
+  clearTimeout(t._h); t._h = setTimeout(() => { t.classList.remove("hl"); hideTip(); }, 2200);
+});
+// 3D tilt
+if (fine && !reduce){
+  stage.addEventListener("pointermove", e => { const r = stage.getBoundingClientRect(); const x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5; archSvg.style.transform = `rotateX(${(-y*14).toFixed(2)}deg) rotateY(${(x*16).toFixed(2)}deg)`; });
+  stage.addEventListener("pointerleave", () => archSvg.style.transform = "");
+}
+
+/* ---------- aligner product (drag to rotate) ---------- */
+const ap = $("#alignerProduct"), aStage = $(".aligner-stage"), hint = $("#dragHint");
+buildArch(ap, "aligner").set(1);
+let rx = 42, rz = -12, drag = null;
+aStage.addEventListener("pointerdown", e => { drag = {x:e.clientX, y:e.clientY, rx, rz}; aStage.classList.add("drag"); aStage.setPointerCapture(e.pointerId); hint.classList.add("gone"); });
+aStage.addEventListener("pointermove", e => { if (!drag) return; rz = drag.rz + (e.clientX - drag.x)*.4; rx = Math.max(5, Math.min(75, drag.rx - (e.clientY - drag.y)*.3)); });
+const endDrag = () => { drag = null; aStage.classList.remove("drag"); };
+aStage.addEventListener("pointerup", endDrag); aStage.addEventListener("pointercancel", endDrag);
+(function loop(t){
+  const bob = reduce ? 0 : Math.sin(t/1300), sway = (reduce || drag) ? 0 : Math.sin(t/2100)*3;
+  ap.style.transform = `rotateX(${rx.toFixed(2)}deg) rotateZ(${(rz + sway).toFixed(2)}deg) scale(1.05) translateY(${(-6 - bob*6).toFixed(2)}px)`;
+  requestAnimationFrame(loop);
+})(0);
+
+/* ---------- braces illustration ---------- */
+(function(){
+  const g = $("#braces");
+  [[18,40],[46,36],[76,33],[106,33],[136,36],[164,40]].forEach(([x,y]) => {
+    el("rect", {x:x-12,y:y-6,width:24,height:56,rx:11,fill:"#F6EFE6",stroke:"#D9CBB8","stroke-width":"1"}, g);
+    el("rect", {x:x-6,y:y+16,width:12,height:12,rx:2.5,fill:"#C9CED4",stroke:"#9AA2AA","stroke-width":"1"}, g);
+    el("circle", {cx:x,cy:y+22,r:2.6,fill:"none",stroke:"#B9858F","stroke-width":"1.6"}, g);
+  });
+  el("path", {d:"M4 64 Q100 50 196 64",stroke:"#8E979F","stroke-width":"2",fill:"none"}, g);
+})();
+
+/* ---------- quiz ---------- */
+const Q = [
+  {k:"Para", h:"Para quem é o <em>tratamento</em>?", o:[["Para mim","Sou adulto(a)"],["Para um adolescente","Dentição em desenvolvimento"],["Para uma criança","A partir dos 6 anos"]]},
+  {k:"Incomoda", h:"O que mais <em>incomoda</em> hoje?", o:[["Dentes tortos","Apinhados ou girados"],["Espaços entre os dentes","Os famosos diastemas"],["A mordida","O encaixe entre os dentes"],["Ainda não sei","Quero entender na avaliação"]]},
+  {k:"Prioridade", h:"O que é mais <em>importante</em> para você?", o:[["Discrição","Que quase ninguém perceba"],["Liberdade","Remover para comer e higienizar"],["Tratamento tradicional","Versátil e eficiente"],["Orientação da Dra.","Decidir juntos na consulta"]]},
+];
+const R = {
+  alin:{t:"Alinhadores invisíveis", h:"Alinhadores <em>invisíveis</em>", p:"Transparência, conforto e liberdade para transformar seu sorriso. Placas removíveis, feitas sob medida, que movimentam os dentes de forma gradual.", u:"alinhadores-invisiveis"},
+  metal:{t:"Aparelho metálico", h:"Aparelho <em>metálico</em>", p:"Um tratamento tradicional, versátil e eficiente para alinhar os dentes e corrigir a mordida.", u:"aparelho-metalico"},
+  orto:{t:"Ortopedia infantil", h:"Ortopedia <em>infantil</em>", p:"A partir dos 6 anos, com foco no crescimento e desenvolvimento dos ossos da face. Aparelhos que orientam o desenvolvimento craniofacial durante o crescimento.", u:"ortopedia-infantil"},
+  aval:{t:"Avaliação completa", h:"Uma avaliação <em>completa</em>", p:"Conversamos sobre suas expectativas, avalio seu sorriso e a mordida e planejamos juntos o tratamento mais indicado para você.", u:null},
+};
+const qBody = $("#qBody"), qStep = $("#qStep"), qBar = $("#qBar");
+let ans = [];
+function total(){ return ans[0] === 2 ? 2 : 3; }
+function renderQ(){
+  const i = ans.length;
+  if (i >= total()) return renderResult();
+  const q = Q[i];
+  qStep.textContent = `Pergunta ${i + 1} de ${total()}`; qBar.style.width = (i/total()*100) + "%";
+  qBody.style.animation = "none"; qBody.offsetHeight; qBody.style.animation = "";
+  qBody.innerHTML = `<h3>${q.h}</h3><div class="opts">${q.o.map((o, j) => `<button class="opt" data-j="${j}"><span class="k">${String.fromCharCode(65 + j)}</span><span>${o[0]}<small>${o[1]}</small></span></button>`).join("")}</div>${i ? `<button class="q-back" id="qBack">← Voltar</button>` : ""}`;
+  qBody.querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => { ans.push(+b.dataset.j); renderQ(); }));
+  const back = $("#qBack"); if (back) back.addEventListener("click", () => { ans.pop(); renderQ(); });
+}
+function renderResult(){
+  const key = ans[0] === 2 ? "orto" : ans[2] === 0 || ans[2] === 1 ? "alin" : ans[2] === 2 ? "metal" : "aval";
+  const r = R[key];
+  qStep.textContent = "Seu resultado"; qBar.style.width = "100%";
+  const picked = ans.map((a, i) => Q[i].o[a][0]);
+  const msg = `Olá, Dra. Gabriela! Fiz o teste no site.\n${picked.map((p, i) => `• ${Q[i].k}: ${p}`).join("\n")}\nResultado: ${r.t}.\nQuero marcar uma avaliação.`;
+  qBody.style.animation = "none"; qBody.offsetHeight; qBody.style.animation = "";
+  qBody.innerHTML = `<div class="result"><span class="rtag">✦ Um caminho possível</span><h3>${r.h}</h3><p>${r.p}</p>
+    <div class="answers">${picked.map(p => `<span>${p}</span>`).join("")}</div>
+    <p class="note">Esta é apenas uma orientação inicial e não substitui a avaliação clínica. A indicação final é feita na consulta.</p>
+    <div class="row"><a class="btn btn-primary" target="_blank" rel="noopener" href="${waLink(msg)}">Agendar com este resultado <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    ${r.u ? `<a class="btn btn-ghost" href="https://site-dra-gabriela.orto-digital.workers.dev/tratamentos/${r.u}">Saiba mais</a>` : ""}
+    <button class="q-back" id="qRedo" style="margin:0 0 0 6px">↺ Refazer</button></div></div>`;
+  $("#qRedo").addEventListener("click", () => { ans = []; renderQ(); });
+  if (!reduce){
+    const c = document.createElement("div"); c.className = "confetti";
+    const cols = ["#5A2D3F","#B9858F","#B89B6E","#EBD9D6","#D9C6A5"];
+    for (let k = 0; k < 34; k++){ const i = document.createElement("i"); i.style.left = Math.random()*100 + "%"; i.style.background = cols[k % 5]; i.style.setProperty("--dx", (Math.random()*160 - 80) + "px"); i.style.setProperty("--r", (Math.random()*720 - 360) + "deg"); i.style.animationDelay = Math.random()*.3 + "s"; c.appendChild(i); }
+    $("#quiz").appendChild(c); setTimeout(() => c.remove(), 2200);
+  }
+}
+renderQ();
+
+/* ---------- contact form → WhatsApp ---------- */
+const form = $("#cform"), preview = $("#preview"), st = {trat:"", quem:"", periodo:""};
+function buildMsg(){
+  const n = form.nome.value.trim();
+  let m = `Olá, Dra. Gabriela! ${n ? `Meu nome é ${n}. ` : ""}Vim pelo site e quero marcar uma avaliação.`;
+  if (st.trat) m += `\nTratamento de interesse: ${st.trat}`;
+  if (st.quem) m += `\nÉ ${st.quem.toLowerCase()}`;
+  if (st.periodo) m += `\nMelhor período: ${st.periodo}`;
+  return m;
+}
+const upd = () => preview.textContent = buildMsg();
+form.querySelectorAll(".pills").forEach(p => p.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const on = b.getAttribute("aria-pressed") !== "true";
+  p.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b && on));
+  st[p.dataset.name] = on ? b.textContent : ""; upd();
+}));
+form.nome.addEventListener("input", upd);
+form.addEventListener("submit", e => { e.preventDefault(); window.open(waLink(buildMsg()), "_blank", "noopener"); });
+upd();
+
+/* ---------- cases: compare sliders, lightbox, hint ---------- */
+const CASES = {
+  alinhador:["alinhador-04.avif","alinhador-06.avif","alinhador-16.avif","alinhador-05.jpg","alinhador-09.jpg","alinhador-10.jpg","alinhador-11.jpg","alinhador-12.jpg"],
+  fixo:["fixo-02.jpg","fixo-10.jpg","fixo-09.jpg","fixo-14.jpg","fixo-01.jpg"],
+  ortopedia:["ortopedia-06.jpg","ortopedia-11.jpg","ortopedia-07.jpg","ortopedia-01.jpg"],
+};
+const CAT = {alinhador:"Alinhadores invisíveis", fixo:"Aparelho fixo", ortopedia:"Ortopedia infantil"};
+let curCat = "alinhador", lbIdx = 0;
+function makeBA(f, i, big){
+  const d = document.createElement("div");
+  d.className = "ba"; d.style.setProperty("--x", "50%");
+  d.innerHTML = `<div class="layer after" style="background-image:url(assets/${f})"></div><div class="layer before" style="background-image:url(assets/${f})"></div><div class="handle"></div><span class="lbl l">Antes</span><span class="lbl r">Depois</span><input type="range" min="0" max="100" value="50" step=".1" aria-label="Comparar antes e depois, caso ${i + 1}">${big ? "" : `<button class="zoom" aria-label="Ampliar caso ${i + 1}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>`}`;
+  const inp = d.querySelector("input");
+  inp.addEventListener("input", () => d.style.setProperty("--x", inp.value + "%"));
+  if (!big) d.querySelector(".zoom").addEventListener("click", () => openLB(i));
+  return d;
+}
+const box = $("#cases");
+function wiggle(cards){
+  if (reduce) return;
+  const t0 = performance.now();
+  (function f(n){
+    const k = (n - t0)/1600;
+    if (k >= 1) return cards.forEach(c => c.style.setProperty("--x", "50%"));
+    const x = 50 + Math.sin(k*Math.PI*2)*20*(1 - k);
+    cards.forEach(c => c.style.setProperty("--x", x + "%"));
+    requestAnimationFrame(f);
+  })(t0);
+}
+function render(cat){
+  curCat = cat; box.innerHTML = "";
+  CASES[cat].forEach((f, i) => box.appendChild(makeBA(f, i, false)));
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+  render(b.dataset.cat); wiggle([...box.children].slice(0, 3));
+}));
+render("alinhador");
+new IntersectionObserver((es, o) => { if (es[0].isIntersecting){ o.disconnect(); setTimeout(() => wiggle([...box.children].slice(0, 3)), 400); } }, {threshold:.3}).observe(box);
+
+const lb = $("#lb"), slot = $("#lbSlot"), cap = $("#lbCap");
+function fillLB(){
+  const list = CASES[curCat]; lbIdx = (lbIdx + list.length) % list.length;
+  slot.innerHTML = ""; slot.appendChild(makeBA(list[lbIdx], lbIdx, true));
+  cap.textContent = `${CAT[curCat]} · Caso ${lbIdx + 1} de ${list.length}`;
+}
+function openLB(i){ lbIdx = i; fillLB(); lb.showModal(); }
+$("#lbX").addEventListener("click", () => lb.close());
+$("#lbPrev").addEventListener("click", () => { lbIdx--; fillLB(); });
+$("#lbNext").addEventListener("click", () => { lbIdx++; fillLB(); });
+lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
+lb.addEventListener("keydown", e => { if (e.key === "ArrowRight" && e.target.type !== "range"){ lbIdx++; fillLB(); } if (e.key === "ArrowLeft" && e.target.type !== "range"){ lbIdx--; fillLB(); } });
+})();
+</script>
+</body>
+</html>
